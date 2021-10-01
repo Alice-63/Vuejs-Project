@@ -1,6 +1,6 @@
-# urun-islemleri
+# vuejsproject
 
-> A Vue.js project
+> vuejsproject
 
 ## Build Setup
 

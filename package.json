@@ -1,8 +1,8 @@
-{
-  "name": "urun-islemleri",
-  "description": "A Vue.js project",
+ {
+  "name": "vuejsproject",
+  "description": "vuejsproject",
   "version": "1.0.0",
-  "author": "gkandemir",
+  "author": "Alice-63 <alicetindag84@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
