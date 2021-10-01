@@ -10,7 +10,7 @@ import Header from './components/shared/Header.vue'
 import Footer from './components/shared/Footer.vue'
 // import ProductPurchase from './components/products/ProductPurchase.vue'
 // import ProductSell from './components/products/ProductSell.vue'
-// import ProductsList from './components/products/ProductsList.vue'
+// import ProductList from './components/products/ProductList.vue'
 
 
 
@@ -23,7 +23,7 @@ export default {
     Footer,
     // ProductPurchase,
     // ProductSell,
-    // ProductsList
+    // ProductList
   }
 }
 </script>
