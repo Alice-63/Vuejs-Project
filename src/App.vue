@@ -1,7 +1,7 @@
 <template>
   <div>
 <Header/>
-<ProductSell/>
+<ProductsList/>
 <Footer/>
   </div>
 </template>
@@ -10,6 +10,9 @@ import Header from './components/shared/Header.vue'
 import Footer from './components/shared/Footer.vue'
 import ProductPurchase from './components/products/ProductPurchase.vue'
 import ProductSell from './components/products/ProductSell.vue'
+import ProductsList from './components/products/ProductsList.vue'
+
+
 
 
 
@@ -19,7 +22,8 @@ export default {
     Header,
     Footer,
     ProductPurchase,
-    ProductSell
+    ProductSell,
+    ProductsList
   }
 }
 </script>
