@@ -1,9 +1,6 @@
 <template>
   <div>
 <Header/>
-<router-link to="/">Product List</router-link>
-<router-link to="/product-sell">Product Sell</router-link>
-<router-link to="product-purchase">ProductPurchase</router-link>
 <router-view></router-view>
 <Footer/>
   </div>
