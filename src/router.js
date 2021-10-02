@@ -8,21 +8,23 @@ import ProductPurchase from './components/products/ProductPurchase.vue';
 
 const routes=[
     {
-        path:"/", 
+        path:"/",
+        name:"/" ,
         component:ProductList
     },
     {
-        path:"/urun-cikisi", 
+        path:"/product-sell", 
         component:ProductSell
     },
     {
-        path:"/urun-islemleri", 
+        path:"/product-purchase", 
         component:ProductPurchase
     },
-    {
-        path:"*", 
-        redirect:"/"
-    }
+//     {
+//         path:"*", 
+//         redirect:"/"
+//     }
+// 
 ]
 
 export const router=new VueRouter({
