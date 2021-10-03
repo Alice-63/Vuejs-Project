@@ -23,7 +23,7 @@
                               class="form-control"></textarea>
                 </div>
                 <hr>
-                <button class="btn btn-primary" @click="saveProduct" disabled>Save</button>
+                <button class="btn btn-primary" @click="saveProduct" :disabled="saveEnable">Save</button>
             </div>
         </div>
     </div>
@@ -50,7 +50,13 @@ export default {
   computed:
   {
       saveEnable(){
-
+          if(this.product.titel.length>0 && this.product.count>0 && this.product.price>0 && this.product.description.length>0)
+          {
+              return false
+          }
+          else{
+              return true
+          }
       }
   }
 }
