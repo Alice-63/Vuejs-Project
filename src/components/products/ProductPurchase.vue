@@ -23,7 +23,7 @@
                               class="form-control"></textarea>
                 </div>
                 <hr>
-                <button class="btn btn-primary" @click="saveProduct">Save</button>
+                <button class="btn btn-primary" @click="saveProduct" disabled>Save</button>
             </div>
         </div>
     </div>
@@ -45,6 +45,12 @@ export default {
   {
       saveProduct(){
           this.$store.dispatch("saveProduct",this.product)
+      }
+  },
+  computed:
+  {
+      saveEnable(){
+
       }
   }
 }
