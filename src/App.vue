@@ -1,7 +1,7 @@
 <template>
   <div>
 <Header/>
-<router-view></router-view>
+<router-view class="animate__animated animate__zoomIn"></router-view>
 <Footer/>
   </div>
 </template>
@@ -30,6 +30,8 @@ export default {
   }
 }
 </script>
-<style scoped>
-
+<style>
+body{
+  background-color:#a7a0bb5c;
+}
 </style>
