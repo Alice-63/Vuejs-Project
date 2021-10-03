@@ -6,24 +6,24 @@
                 <h3>Ürün İşlemleri</h3>
                 <hr>
                 <div class="form-group">
-                    <label>Ürün Adı</label>
+                    <label>Product Titel</label>
                     <input v-model="product.titel" type="text" class="form-control" placeholder="Ürün adını giriniz..">
                 </div>
                 <div class="form-group">
-                    <label>Adet</label>
-                    <input v-model="product.count" type="text" class="form-control" placeholder="Ürün adetini giriniz..">
+                    <label>Count</label>
+                    <input v-model="product.count" type="number" class="form-control" placeholder="Ürün adetini giriniz..">
                 </div>
                 <div class="form-group">
-                    <label>Fiyat</label>
-                    <input v-model="product.price" type="text" class="form-control" placeholder="Ürün fiyatı giriniz..">
+                    <label>Price</label>
+                    <input v-model="product.price" type="number" class="form-control" placeholder="Ürün fiyatı giriniz..">
                 </div>
                 <div class="form-group">
-                    <label>Açıklama</label>
+                    <label>Description</label>
                     <textarea v-model="product.description" cols="30" rows="5" placeholder="Ürüne ait bir açıklama giriniz..."
                               class="form-control"></textarea>
                 </div>
                 <hr>
-                <button class="btn btn-primary">Kaydet</button>
+                <button class="btn btn-primary" @click="saveProduct">Save</button>
             </div>
         </div>
     </div>
@@ -39,6 +39,12 @@ export default {
               price:null,
               description:""
           }
+      }
+  },
+  methods:
+  {
+      saveProduct(){
+          this.$store.dispatch("saveProduct",this.product)
       }
   }
 }
