@@ -5,7 +5,11 @@ import product from "./product";
 Vue.use(Vuex)
 
 export const store=new Vuex.Store({
-    state:{},
+    state:{
+        purchase:0.0,
+        sale:0.0,
+        balance:0.0
+    },
     modules:{
         product
     }
