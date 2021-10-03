@@ -20,12 +20,14 @@ const actions={
     innitApp({commit}){
 
     },
-    saveProduct({commit},state,product){
+    saveProduct({commit},product){
         Vue.http.post("https://product-list-e3612-default-rtdb.firebaseio.com/products.json",product)
         .then(response=>{
+
+            // Product Update
           product.key=response.body.name
           commit("updateProductList",product)
-          console.log(state.products)
+      
         })
     },
     sellProduct({commit}, payload){}
