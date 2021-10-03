@@ -37,13 +37,15 @@ export default {
               titel:"",
               count:null,
               price:null,
-              description:""
+              description:"",
+              buttonClick:false
           }
       }
   },
   methods:
   {
       saveProduct(){
+          this.buttonClick=true
           this.$store.dispatch("saveProduct",this.product)
       }
   },
