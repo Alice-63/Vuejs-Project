@@ -20,7 +20,7 @@ const actions={
     innitApp({commit}){
 
     },
-    saveProduct({commit},product){
+    saveProduct({dispatch,commit,state},product){
         Vue.http.post("https://product-list-e3612-default-rtdb.firebaseio.com/products.json",product)
         .then(response=>{
 
@@ -36,7 +36,7 @@ const actions={
             sale:0,
             count:product.count
         }
-        dispatchEvent("setTradeResult",product)
+        dispatch("setTradeResult",tradeResult)
       
         })
     },
