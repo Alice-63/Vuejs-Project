@@ -62,7 +62,7 @@ export default {
       }
   },
   beforeRouteLeave(to,from,next){
-      if(this.product.titel.length>0 || this.product.count>0 || this.product.price>0 || this.product.description.length>0)
+      if((this.product.titel.length>0 || this.product.count>0 || this.product.price>0 || this.product.description.length>0)&& !this.buttonClick)
       {
           if(confirm("Kaydedilmemis Degisiklikler var! Yinede Devam Etmek Istiyor musunuz?"))
           {
