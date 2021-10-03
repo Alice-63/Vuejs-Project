@@ -34,4 +34,9 @@ export default {
 body{
   background-color:#a7a0bb5c;
 }
+.animate__animated, .animate__zoomIn
+{
+    --animate-duration: 1s;
+
+}
 </style>
