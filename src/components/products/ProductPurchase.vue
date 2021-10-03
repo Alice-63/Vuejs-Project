@@ -58,6 +58,9 @@ export default {
               return true
           }
       }
+  },
+  beforeRouteLeave(to,from,next){
+      next(false)
   }
 }
 </script>
