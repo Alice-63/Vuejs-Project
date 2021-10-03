@@ -6,6 +6,13 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource)
 
+// purchase=> currency
+
+
+Vue.filter("currency",(value)=>{
+  return parseFloat(value).toLocaleString(undefined, {minimumFractionDigits:2})+ " €"
+})
+
 new Vue({
   el: '#app',
   render: h => h(App),

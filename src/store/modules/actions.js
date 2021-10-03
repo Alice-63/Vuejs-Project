@@ -13,7 +13,7 @@ Vue.http.put("https://product-list-e3612-default-rtdb.firebaseio.com/trade-resul
     console.log(response)
     console.log(state.purchase)
     console.log(state.sale)
-    console.log(state.count)
+    console.log(state.balance)
 
     
 })
@@ -22,4 +22,10 @@ Vue.http.put("https://product-list-e3612-default-rtdb.firebaseio.com/trade-resul
 
 export const getTradeResult=({commit})=>{
 
+
+    Vue.http.get("https://product-list-e3612-default-rtdb.firebaseio.com/trade-result.json")
+    .then(response=>{
+        console.log(response)
+        commit("updateTradeResult",response.body)
+    })
 }

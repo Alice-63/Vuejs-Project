@@ -24,6 +24,9 @@ export default {
     // ProductPurchase,
     // ProductSell,
     // ProductList
+  },
+  created(){
+    this.$store.dispatch("getTradeResult");
   }
 }
 </script>
