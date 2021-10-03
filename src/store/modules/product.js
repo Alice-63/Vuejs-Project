@@ -27,6 +27,16 @@ const actions={
             // Product Update
           product.key=response.body.name
           commit("updateProductList",product)
+
+        //   Trade Update
+
+        let tradeResult=
+        {
+            purchase:product.price,
+            sale:0,
+            count:product.count
+        }
+        dispatchEvent("setTradeResult",product)
       
         })
     },
