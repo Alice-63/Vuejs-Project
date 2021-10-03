@@ -60,7 +60,21 @@ export default {
       }
   },
   beforeRouteLeave(to,from,next){
-      next(false)
+      if(this.product.titel.length>0 || this.product.count>0 || this.product.price>0 || this.product.description.length>0)
+      {
+          if(confirm("Kaydedilmemis Degisiklikler var! Yinede Devam Etmek Istiyor musunuz?"))
+          {
+              next()
+          }
+          else{
+              next(false)
+          }
+      }
+      else{
+          next()
+      }
+     
+     
   }
 }
 </script>
