@@ -7,7 +7,7 @@
                 <hr>
                 <div class="form-group">
                     <label>Ürün Adı</label>
-                    <select class="form-control">
+                    <select class="form-control" v-model="selectedProduct">
                         <option :value="product.key" v-for="product in getProducts" :key="product.id">{{product.titel}}</option>
 
                     </select>
@@ -42,6 +42,11 @@
 <script>
 import {mapGetters} from 'vuex'
 export default {
+    data(){
+        return{
+            selectedProduct:null
+        }
+    },
   computed:
   {
       ...mapGetters(["getProducts"])
