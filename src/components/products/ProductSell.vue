@@ -7,8 +7,8 @@
                 <hr>
                 <div class="form-group">
                     <label>Ürün Adı</label>
-                    <select class="form-control" v-model="selectedProduct">
-                        <option :value="product.key" v-for="product in getProducts" :key="product.id" @change="productSelected">{{product.titel}}</option>
+                    <select class="form-control" v-model="selectedProduct" @change="productSelected">
+                        <option :value="product.key" v-for="product in getProducts" :key="product.id">{{product.titel}}</option>
 
                     </select>
                 </div>
