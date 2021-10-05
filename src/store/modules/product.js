@@ -63,18 +63,23 @@ const actions={
                 let totalCount=product[0].count-payload.count;
 
                 Vue.http.patch("https://product-list-e3612-default-rtdb.firebaseio.com/products/"+payload.key+".json",{count:totalCount})
+                .then(response=>{
+                    product[0].count=totalCount
 
-                product[0].count=totalCount
+                    let tradeResult=
+                    {
+                        purchase:0,
+                        sale:product[0].price,
+                        count:payload.count
+                    }
+                    dispatch("setTradeResult",tradeResult)
+                    router.replace("/")
+                })
+                
 
             }
-            let tradeResult=
-        {
-            purchase:product[0].price,
-            sale:0,
-            count:payload.count
-        }
-        dispatch("setTradeResult",tradeResult)
-        router.replace("/")
+            
+        
 
        
     }
