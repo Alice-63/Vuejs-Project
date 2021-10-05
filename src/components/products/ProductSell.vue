@@ -12,18 +12,15 @@
 
                     </select>
                 </div>
-                <div class="card mb-2 border border-danger" >
+                <div class="card mb-2 border border-danger" v-if="product=!null">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 text-center">
                                 <div class="mb-3">
-                                    <span class="badge badge-info">Stok : 4</span>
-                                    <span class="badge badge-primary">Fiyat : 100,5 TL</span>
+                                    <span class="badge badge-info">Stok : {{product.count}}</span>
+                                    <span class="badge badge-primary">Fiyat : {{product.price}}</span>
                                 </div>
-                                <p class="border border-warning p-2 text-secondary">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Assumenda debitis deleniti eos impedit iste numquam quos sit.
-                                    Dignissimos, mollitia nemo officia reiciendis repellendus rerum velit. Eos libero magnam
-                                    quas tempore!</p>
+                                <p class="border border-warning p-2 text-secondary">{{product.description}}</p>
                             </div>
                         </div>
                     </div>
