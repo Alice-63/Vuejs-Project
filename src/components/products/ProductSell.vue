@@ -66,7 +66,8 @@ export default {
           let product={
               key:this.selectedProduct,
               count:this.product_count
-          }
+          },
+          this.$store.dispatch("sellProduct", product)
       }
   }
 }
