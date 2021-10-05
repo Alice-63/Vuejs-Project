@@ -8,7 +8,13 @@
                 <div class="form-group">
                     <label>Product Name</label>
                     <select class="form-control" v-model="selectedProduct" @change="productSelected">
-                        <option :value="product.key" v-for="product in getProducts" :key="product.id">{{product.titel}}</option>
+                        <option :value="product.key" 
+                        v-for="product in getProducts" 
+                        :key="product.id"
+                        disabled
+                        >{{product.titel}}
+                        
+                        </option>
 
                     </select>
                 </div>
