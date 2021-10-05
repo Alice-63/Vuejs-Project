@@ -6,16 +6,16 @@
                 <div class="card-body">
                     <h3>Ürün Listesi</h3>
                     <hr>
-                    <table class="table table-hover table-striped table-bordered" v-if="getProducts.length>0">
+                    <table class="table table-hover table-striped table-bordered" v-if="getProducts.length>0" >
                         <thead>
-                        <th>id</th>
-                        <th>Ürün Adı</th>
-                        <th>Adet</th>
-                        <th>Fiyat</th>
-                        <th>Açıklama</th>
+                        <th >id</th>
+                        <th>Product Name</th>
+                        <th>Count</th>
+                        <th>Price</th>
+                        <th>Description</th>
                         </thead>
                         <tbody>
-                        <tr v-for="product in getProducts" :key="product.id">
+                        <tr v-for="product in getProducts" :key="product.id" @click="newPage">
                             <td class="align-middle text-center"><span class="badge badge-info"> {{product.key}} </span></td>
                             <td class="align-middle text-center"> {{product.titel }} </td>
                             <td class="align-middle text-center" :class="setClasses(product.count)"> {{product.count }} </td>
@@ -49,11 +49,17 @@ export default {
                 "bg-danger text-white":count==0 ||count==null ,
                 "bg-success text-white":count>0
             }
+        },
+        newPage(){
+            alert()
         }
     }
   
 }
 </script>
 <style scoped>
-
+td:hover
+{
+    cursor: pointer;
+}
 </style>
