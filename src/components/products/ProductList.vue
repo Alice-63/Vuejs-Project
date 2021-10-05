@@ -15,21 +15,21 @@
                         <th>Description</th>
                         </thead>
                         <tbody>
-                        <tr id="box" v-for="product in getProducts" :key="product.id" @click="newPage">
+                        <tr id="box" v-for="(product,index) in getProducts" :key="product.id" @click="newPage(index)">
                             <td class="align-middle text-center"><span class="badge badge-info"> {{product.key}} </span></td>
                             <td class="align-middle text-center"> {{product.titel }} </td>
                             <td class="align-middle text-center" :class="setClasses(product.count)"> {{product.count }} </td>
                             <td style="width: 120px;"> {{product.price |currency}}</td>
                             <td class="align-middle"> {{product.description }}</td>
-                            <div id="descriptionBox">
-                                <ul>
-                                    <li>{{product.key}} </li>
-                                    <li>{{product.titel }}</li>
-                                    <li>{{product.count }}</li>
-                                    <li>{{product.price |currency}}</li>
-                                    <li>{{product.description }}</li>
+                            <!-- <div id="descriptionBox">
+                                <ul class="list-group">
+                                    <li class="list-group-item">{{product.key}} </li>
+                                    <li class="list-group-item">{{product.titel }}</li>
+                                    <li class="list-group-item">{{product.count }}</li>
+                                    <li class="list-group-item">{{product.price |currency}}</li>
+                                    <li class="list-group-item">{{product.description }}</li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </tr>
                         </tbody>
     
@@ -60,8 +60,9 @@ export default {
                 "bg-success text-white":count>0
             }
         },
-        newPage(){
-            alert()
+        newPage(event){
+            let newProduct=this.getProducts[event];
+           console.log (newProduct.titel)
         }
     }
   
