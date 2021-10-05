@@ -17,7 +17,7 @@
                         <option :value="product.key" 
                         v-for="product in getProducts" 
                         :key="product.id"
-                        :disabled="product.count==0"
+                        :disabled="product.count<=0"
                         >{{product.titel}}
                         
                         </option>
