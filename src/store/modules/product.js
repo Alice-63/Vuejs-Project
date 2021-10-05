@@ -53,7 +53,23 @@ const actions={
       
         })
     },
-    sellProduct({commit}, payload){}
+    sellProduct({state,commit}, payload){
+
+        let product= state.products.filter(element =>{
+            return element.key==payload.key})
+
+            if(product)
+            {
+                let totalCount=product[0].count-payload.count;
+
+                Vue.http.patch("https://product-list-e3612-default-rtdb.firebaseio.com/products/"+payload.key+".json"+{count:totalCount})
+                
+                product[0].count=totalCount
+
+            }
+
+       
+    }
 }
 export default
 {
