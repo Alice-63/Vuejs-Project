@@ -8,7 +8,7 @@
                 <div class="form-group">
                     <label>Ürün Adı</label>
                     <select class="form-control" v-model="selectedProduct">
-                        <option :value="product.key" v-for="product in getProducts" :key="product.id">{{product.titel}}</option>
+                        <option :value="product.key" v-for="product in getProducts" :key="product.id" @change="productSelected">{{product.titel}}</option>
 
                     </select>
                 </div>
@@ -49,7 +49,10 @@ export default {
     },
   computed:
   {
-      ...mapGetters(["getProducts"])
+      ...mapGetters(["getProducts"]),
+      productSelected(){
+          this.$store.getters.getProduct(this.selectedProduct)
+      }
   }
 }
 </script>
