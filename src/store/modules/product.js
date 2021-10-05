@@ -9,7 +9,9 @@ const getters={
         return state.products
     },
     getProduct(state){
-
+       return key=> state.products.filter(element =>{
+            return element.key==key
+        })
     }
 }
 const mutations={
@@ -21,7 +23,7 @@ const actions={
     innitApp({commit}){
         Vue.http.get("https://product-list-e3612-default-rtdb.firebaseio.com/products.json")
         .then(response=>{
-            console.log(response)
+           
             let data=response.body
             for(let key in data)
             {

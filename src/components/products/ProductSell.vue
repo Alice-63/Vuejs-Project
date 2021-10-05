@@ -50,8 +50,12 @@ export default {
   computed:
   {
       ...mapGetters(["getProducts"]),
-      productSelected(){
-          this.$store.getters.getProduct(this.selectedProduct)
+     
+  },
+  methods:{
+       productSelected(){
+          let product=this.$store.getters.getProduct(this.selectedProduct)[0]
+          console.log(product)
       }
   }
 }
