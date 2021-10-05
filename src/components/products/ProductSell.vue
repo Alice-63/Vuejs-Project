@@ -42,7 +42,7 @@
                     <input v-model="product_count" type="text" class="form-control" placeholder="Ürün adetini giriniz..">
                 </div>
                 <hr>
-                <button @click="save" class="btn btn-primary">Save</button>
+                <button @click="save" class="btn btn-primary" :disabled="saveEnable">Save</button>
             </div>
         </div>
     </div>
@@ -62,6 +62,15 @@ export default {
   computed:
   {
       ...mapGetters(["getProducts"]),
+      saveEnable(){
+          if(this.selectedProduct!==null && this.product_count>0 )
+          {
+              return false
+          }
+          else{
+              return true
+          }
+      },
        isLoading(){
 
           if(this.buttonClick)
