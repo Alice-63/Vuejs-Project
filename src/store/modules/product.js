@@ -65,6 +65,13 @@ const actions={
                 Vue.http.patch("https://product-list-e3612-default-rtdb.firebaseio.com/products/"+payload.key+".json",{count:totalCount})
                 .then(response=>{
                     product[0].count=totalCount
+                    
+                    if(payload.count>product[0].count)
+                    {
+                        alert("Sayi Fazla")
+                        dispatch("setTradeResult",tradeResult)
+                        router.replace("/")
+                    }
 
                     let tradeResult=
                     {
