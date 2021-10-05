@@ -69,7 +69,6 @@ const actions={
                     if(payload.count>product[0].count)
                     {
                         alert("Sayi Fazla")
-                        dispatch("setTradeResult",tradeResult)
                         router.replace("/")
                     }
 
