@@ -62,7 +62,7 @@ export default {
         },
         newPage(event){
             let newProduct=this.getProducts[event];
-           console.log (newProduct.titel)
+           console.log (newProduct.titel,newProduct.count,newProduct.description)
         }
     }
   
