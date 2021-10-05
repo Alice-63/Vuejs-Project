@@ -41,7 +41,8 @@ import {mapGetters} from 'vuex'
 export default {
     data(){
         return{
-            selectedProduct:null
+            selectedProduct:null,
+            product:null
         }
     },
   computed:
@@ -51,8 +52,8 @@ export default {
   },
   methods:{
        productSelected(){
-          let product=this.$store.getters.getProduct(this.selectedProduct)[0]
-          console.log(product)
+          this.product=this.$store.getters.getProduct(this.selectedProduct)[0]
+          
       }
   }
 }
