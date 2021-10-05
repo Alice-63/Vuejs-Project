@@ -12,7 +12,7 @@
 
                     </select>
                 </div>
-                <div class="card mb-2 border border-danger">
+                <div class="card mb-2 border border-danger" >
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 text-center">
