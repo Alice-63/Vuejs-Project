@@ -12,7 +12,7 @@
 
                     </select>
                 </div>
-                <div class="card mb-2 border border-danger" v-if="product!==null">
+                <div class="card mb-2 border border-danger animate__animated animate__zoomIn " v-if="product!==null"  >
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 text-center">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Adet</label>
+                    <label>Count</label>
                     <input type="text" class="form-control" placeholder="Ürün adetini giriniz..">
                 </div>
                 <hr>
