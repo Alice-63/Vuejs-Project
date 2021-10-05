@@ -15,14 +15,24 @@
                         <th>Description</th>
                         </thead>
                         <tbody>
-                        <tr v-for="product in getProducts" :key="product.id" @click="newPage">
+                        <tr id="box" v-for="product in getProducts" :key="product.id" @click="newPage">
                             <td class="align-middle text-center"><span class="badge badge-info"> {{product.key}} </span></td>
                             <td class="align-middle text-center"> {{product.titel }} </td>
                             <td class="align-middle text-center" :class="setClasses(product.count)"> {{product.count }} </td>
                             <td style="width: 120px;"> {{product.price |currency}}</td>
                             <td class="align-middle"> {{product.description }}</td>
+                            <div id="descriptionBox">
+                                <ul>
+                                    <li>{{product.key}} </li>
+                                    <li>{{product.titel }}</li>
+                                    <li>{{product.count }}</li>
+                                    <li>{{product.price |currency}}</li>
+                                    <li>{{product.description }}</li>
+                                </ul>
+                            </div>
                         </tr>
                         </tbody>
+    
                     </table>
                     <div class="alert alert-warning" v-else>
                         <strong>Henüz Burada Bir Kayıt Bulamadık</strong>
@@ -61,5 +71,17 @@ export default {
 td:hover
 {
     cursor: pointer;
+}
+#descriptionBox
+{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#box
+{
+    position: relative;
 }
 </style>
