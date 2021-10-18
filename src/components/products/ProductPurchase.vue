@@ -13,19 +13,19 @@
                 <hr>
                 <div class="form-group">
                     <label>Product Titel</label>
-                    <input v-model="product.titel" type="text" class="form-control" placeholder="Ürün adını giriniz..">
+                    <input v-model="product.titel" type="text" class="form-control" placeholder="Enter name...">
                 </div>
                 <div class="form-group">
                     <label>Count</label>
-                    <input v-model="product.count" type="number" class="form-control" placeholder="Ürün adetini giriniz..">
+                    <input v-model="product.count" type="number" class="form-control" placeholder="Enter count">
                 </div>
                 <div class="form-group">
                     <label>Price</label>
-                    <input v-model="product.price" type="number" class="form-control" placeholder="Ürün fiyatı giriniz..">
+                    <input v-model="product.price" type="number" class="form-control" placeholder="Enter price...">
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea v-model="product.description" cols="30" rows="5" placeholder="Ürüne ait bir açıklama giriniz..."
+                    <textarea v-model="product.description" cols="30" rows="5" placeholder="Enter description..."
                               class="form-control"></textarea>
                 </div>
                 <hr>

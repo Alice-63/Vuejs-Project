@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label>Count</label>
-                    <input id="input" v-model="product_count" type="text" class="form-control" placeholder="Ürün adetini giriniz..">
+                    <input id="input" v-model="product_count" type="text" class="form-control" placeholder="Enter count...">
                 </div>
                 <hr>
                 <button @click="save" class="btn btn-primary" :disabled="saveEnable">Save</button>
