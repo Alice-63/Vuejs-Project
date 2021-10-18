@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12 mb-5 card mt-5 shadow">
                 <div class="card-body">
-                    <h3>Ürün Listesi</h3>
+                    <h3>Products List</h3>
                     <hr>
                     <table class="table table-hover table-striped table-bordered" v-if="getProducts.length>0" >
                         <thead>
@@ -35,9 +35,9 @@
     
                     </table>
                     <div class="alert alert-warning" v-else>
-                        <strong>Henüz Burada Bir Kayıt Bulamadık</strong>
+                        <strong>Nothing here yet</strong>
                         <br>
-                        <small>Kayıt Eklemek için Ürün İşlemleri menüsünden yararlanabilirsiniz
+                        <small>You can use the Product purchase menu to add a entry
                         </small>
                     </div>
                 </div>
