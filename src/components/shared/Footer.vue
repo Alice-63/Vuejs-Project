@@ -13,7 +13,7 @@
         <span class="badge badge-success">{{getTradeResult.sale |currency}}</span>
     </span>
     <span class="navbar-text navbar-nav my-2 my-lg-0">
-        <strong>Balance : </strong>
+        <strong>Rest : </strong>
         <span class="badge badge-primary">{{getTradeResult.balance |currency}}</span>
     </span>
 </nav>
